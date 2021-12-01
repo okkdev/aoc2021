@@ -7,7 +7,7 @@ part2 :: [Int] -> Int
 part2 = part1 . go
   where 
     go [] = []
-    go xs = (sum $ take 3 xs) : go (drop 1 xs)
+    go xs = sum (take 3 xs) : go (drop 1 xs)
 
 main :: IO ()
 main = do
