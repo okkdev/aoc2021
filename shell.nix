@@ -1,7 +1,7 @@
 with (import <nixpkgs> {});
 mkShell {
   buildInputs = [
-    ghc
+    haskell.compiler.ghc921
     deno
   ];
 }
