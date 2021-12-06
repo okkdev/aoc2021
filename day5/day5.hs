@@ -8,9 +8,9 @@ type Line = (Point, Point)
 type Point = (Int, Int) 
 
 part1 :: Lines -> Int
-part1 = countOverlaps . getPoints . filter (not_diagonal)
+part1 = countOverlaps . getPoints . filter (notDiagonal)
     where
-        not_diagonal ((x1, y1), (x2, y2)) = x1 == x2 || y1 == y2
+        notDiagonal ((x1, y1), (x2, y2)) = x1 == x2 || y1 == y2
 
 part2 :: Lines -> Int
 part2 = countOverlaps . getPoints
